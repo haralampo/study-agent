@@ -1,0 +1,62 @@
+{
+  "symmetric encryption": {
+    "domain": "General Security Concepts",
+    "definition": "Encryption where the same secret key both locks and unlocks the data. It is fast, but both sides must share the key safely first.",
+    "related": ["asymmetric encryption", "hashing"]
+  },
+  "asymmetric encryption": {
+    "domain": "General Security Concepts",
+    "definition": "Encryption that uses a key pair: a public key anyone can use to encrypt, and a private key only the owner uses to decrypt. It is slower than symmetric encryption but avoids sharing a secret key in advance.",
+    "related": ["symmetric encryption"]
+  },
+  "hashing": {
+    "domain": "General Security Concepts",
+    "definition": "A one-way function that turns data of any size into a fixed-length digest. It cannot be reversed, and it is used to check integrity and to store passwords.",
+    "related": ["symmetric encryption"]
+  },
+  "least privilege": {
+    "domain": "Security Operations",
+    "definition": "Giving a user or program only the access it needs to do its job, so a compromised account can do less damage.",
+    "related": ["multi-factor authentication"]
+  },
+  "multi-factor authentication": {
+    "domain": "Security Operations",
+    "definition": "Requiring two or more different kinds of proof to log in, such as a password plus a code from a phone, so a stolen password alone is not enough.",
+    "related": ["least privilege", "phishing"]
+  },
+  "phishing": {
+    "domain": "Threats, Vulnerabilities, and Mitigations",
+    "definition": "A social engineering attack where an attacker sends a deceptive message, usually email, to trick someone into giving up credentials or running malware.",
+    "related": ["multi-factor authentication"]
+  },
+  "sql injection": {
+    "domain": "Threats, Vulnerabilities, and Mitigations",
+    "definition": "An attack where an attacker puts SQL commands into an input field so the database runs them. Parameterized queries prevent it.",
+    "related": ["cross-site scripting"]
+  },
+  "cross-site scripting": {
+    "domain": "Threats, Vulnerabilities, and Mitigations",
+    "definition": "An attack where an attacker gets a website to deliver malicious JavaScript to other users' browsers, which can steal sessions or act as the victim. Output encoding and input validation help prevent it.",
+    "related": ["sql injection"]
+  },
+  "firewall": {
+    "domain": "Security Architecture",
+    "definition": "A device or software that allows or blocks network traffic based on rules, such as source, destination, and port.",
+    "related": ["network segmentation"]
+  },
+  "network segmentation": {
+    "domain": "Security Architecture",
+    "definition": "Splitting a network into separate zones so a breach in one zone does not spread freely to the others. Firewalls often enforce the boundaries between zones.",
+    "related": ["firewall", "least privilege"]
+  },
+  "incident response": {
+    "domain": "Security Operations",
+    "definition": "The planned process for handling a security incident: prepare, detect and analyze, contain, eradicate, recover, and review lessons learned.",
+    "related": ["risk assessment"]
+  },
+  "risk assessment": {
+    "domain": "Security Program Management and Oversight",
+    "definition": "Identifying assets, threats, and weaknesses, then estimating how likely and how damaging each risk is, so you can decide how to treat it.",
+    "related": ["incident response"]
+  }
+}
